@@ -1,0 +1,109 @@
+---
+title: "Modeling"
+author: "Yanxu Guo"
+date: "11/11/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+```{r}
+df
+```
+```{r}
+# only demographic data
+
+df_new=df[,1:30]
+```
+
+```{r}
+# only demographic data
+df1.step.backword<-step(lm(Visit_density~.,df_new),direction='both',k=2)
+```
+
+
+```{r}
+a=lm(formula = Visit_density ~ MedianIncome + Hispanicpop + Mobility + 
+    Population + Female_density + GDP + Is_Alabama + 
+    TJ.Maxx + HomeGoods, data = df_new)
+```
+
+
+```{r}
+#出来结果
+summary(df1.step.backword)
+```
+
+
+```{r}
+df1=df
+```
+
+
+
+```{r}
+# 若3个店整体 with all data
+df1.step.backword<-step(lm(Visit_density~.,df1),direction='both',k=2)
+```
+
+# df1
+```{r}
+#出来结果
+summary(df1.step.backword)
+```
+
+
+
+
+
+
+
+
+
+```{r}
+df1.tjmaxx=df1[df1$TJ.Maxx==1,]
+df1.marshalls=df1[df1$TJ.Maxx==0&df1$HomeGoods==0,]
+df1.homegoods=df1[df1$HomeGoods==1,]
+```
+
+
+```{r}
+# T.J Maxx
+# Stepwise Regression AIC
+biggest <- formula(lm(Visit_density~.,df1.tjmaxx))
+df1.tj.step.forward<-step(lm(Visit_density~1,df1.tjmaxx),scope=biggest,direction='forward',k=2)
+
+```
+
+```{r}
+#result
+summary(df1.tj.step.forward)
+```
+
+```{r}
+#Marshalls
+df1.marshalls.step.both<-step(lm(Visit_density~.,df1.marshalls),direction='both',k=2)
+```
+
+```{r}
+#result
+summary(df1.marshalls.step.both)
+```
+
+```{r}
+#homegoods
+biggest <- formula(lm(Visit_density~.,df1.homegoods))
+df.homegoods.step.forward<-step(lm(Visit_density~1,df1.homegoods),scope=biggest,direction='forward',k=2)
+```
+
+```{r}
+# Result
+summary(df.homegoods.step.forward)
+```
+
+

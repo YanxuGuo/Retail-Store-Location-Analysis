@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3f540f161a3e59ad0e2ff3f1e3d95bd0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_3f540f161a3e59ad0e2ff3f1e3d95bd0" ></div>
+        
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+    
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Draggable - Default functionality</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#maplegend" ).draggable({
+                        start: function (event, ui) {
+                            $(this).css({
+                                right: "auto",
+                                top: "auto",
+                                bottom: "auto"
+                            });
+                        }
+                    });
+    });
+
+      </script>
+    </head>
+    <body>
+
+
+    <div id='maplegend' class='maplegend' 
+        style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+         border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+
+    <div class='legend-title'>Legend (draggable!)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:red;opacity:0.7;'></span>T.J.Maxx</li>
+        <li><span style='background:blue;opacity:0.7;'></span>Marshalls</li>
+        <li><span style='background:yellow;opacity:0.7;'></span>HomeGoods</li>
+
+      </ul>
+    </div>
+    </div>
+
+    </body>
+    </html>
+
+    <style type='text/css'>
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .maplegend .legend-source {
+        font-size: 80%;
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    </style>
+    
+</body>
+<script>    
+    
+            var map_3f540f161a3e59ad0e2ff3f1e3d95bd0 = L.map(
+                "map_3f540f161a3e59ad0e2ff3f1e3d95bd0",
+                {
+                    center: [35.9751511, -84.10745508181817],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_20fc56529f556e64e3663cd0eb741197 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f540f161a3e59ad0e2ff3f1e3d95bd0);
+        
+    
+            var marker_cluster_ee9b0944b6401f384f3dc78c3fb77620 = L.markerClusterGroup(
+                {}
+            );
+            map_3f540f161a3e59ad0e2ff3f1e3d95bd0.addLayer(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+            var circle_marker_d8de94f98c75bc74e7dd4781894b3631 = L.circleMarker(
+                [35.8589088, -83.5845258],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_326cbedad872e504a8b1ff2abc605d23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_983f41abe91d678462e549cb8076ffe1 = $(`<div id="html_983f41abe91d678462e549cb8076ffe1" style="width: 100.0%; height: 100.0%;">TJ.Maxx<br>Visits: 645239<br>Pop: 5335<br>Median Income: $44792<br></div>`)[0];
+                popup_326cbedad872e504a8b1ff2abc605d23.setContent(html_983f41abe91d678462e549cb8076ffe1);
+            
+        
+
+        circle_marker_d8de94f98c75bc74e7dd4781894b3631.bindPopup(popup_326cbedad872e504a8b1ff2abc605d23)
+        ;
+
+        
+    
+    
+            var circle_marker_2a3752a75eb4031ce6e87c12aa54435e = L.circleMarker(
+                [36.1740674, -85.517972],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_5407d657e6c6b9225e917111a317c332 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88141f62a16499942cfe3254f67d650e = $(`<div id="html_88141f62a16499942cfe3254f67d650e" style="width: 100.0%; height: 100.0%;">TJ.Maxx<br>Visits: 562622<br>Pop: 6171<br>Median Income: $34531<br></div>`)[0];
+                popup_5407d657e6c6b9225e917111a317c332.setContent(html_88141f62a16499942cfe3254f67d650e);
+            
+        
+
+        circle_marker_2a3752a75eb4031ce6e87c12aa54435e.bindPopup(popup_5407d657e6c6b9225e917111a317c332)
+        ;
+
+        
+    
+    
+            var circle_marker_3d3eb81a7e6ec8ca2ded6f95a3018eec = L.circleMarker(
+                [36.1615331, -85.5313547],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_64c927e4869b2f75a8ad58a726fd52c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cddb03006ca3a67e9d025bbe0b4e4e03 = $(`<div id="html_cddb03006ca3a67e9d025bbe0b4e4e03" style="width: 100.0%; height: 100.0%;">TJ.Maxx<br>Visits: 562052<br>Pop: 3385<br>Median Income: $47600<br></div>`)[0];
+                popup_64c927e4869b2f75a8ad58a726fd52c5.setContent(html_cddb03006ca3a67e9d025bbe0b4e4e03);
+            
+        
+
+        circle_marker_3d3eb81a7e6ec8ca2ded6f95a3018eec.bindPopup(popup_64c927e4869b2f75a8ad58a726fd52c5)
+        ;
+
+        
+    
+    
+            var circle_marker_78d8ad998d65c9344167002b2eafd496 = L.circleMarker(
+                [36.1630311, -85.4840281],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_af2c3fb82585b9515659c15452f47b91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec5b05ed112fb7486ec5ab4d2422bcfd = $(`<div id="html_ec5b05ed112fb7486ec5ab4d2422bcfd" style="width: 100.0%; height: 100.0%;">TJ.Maxx<br>Visits: 541436<br>Pop: 2166<br>Median Income: $67064<br></div>`)[0];
+                popup_af2c3fb82585b9515659c15452f47b91.setContent(html_ec5b05ed112fb7486ec5ab4d2422bcfd);
+            
+        
+
+        circle_marker_78d8ad998d65c9344167002b2eafd496.bindPopup(popup_af2c3fb82585b9515659c15452f47b91)
+        ;
+
+        
+    
+    
+            var circle_marker_3b5857c5761bdfbb2cafa067b5188bce = L.circleMarker(
+                [35.1911049, -84.8491389],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_84f7b88dbc64058f0277aa0c00db43e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_906e3370eda94b7a96f32c0d99ea3967 = $(`<div id="html_906e3370eda94b7a96f32c0d99ea3967" style="width: 100.0%; height: 100.0%;">TJ.Maxx<br>Visits: 539109<br>Pop: 3152<br>Median Income: $35160<br></div>`)[0];
+                popup_84f7b88dbc64058f0277aa0c00db43e2.setContent(html_906e3370eda94b7a96f32c0d99ea3967);
+            
+        
+
+        circle_marker_3b5857c5761bdfbb2cafa067b5188bce.bindPopup(popup_84f7b88dbc64058f0277aa0c00db43e2)
+        ;
+
+        
+    
+    
+            var circle_marker_841b71caae5a1ca9b0e75555af0919c9 = L.circleMarker(
+                [35.8589088, -83.5845258],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_acde7e223aad75a7d6749784914a0dfc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_390a80298c81d4f337db016c6d59402b = $(`<div id="html_390a80298c81d4f337db016c6d59402b" style="width: 100.0%; height: 100.0%;">TJ.Maxx/Marshalls/HomeGoods<br>Visits: 645239/554943/524555<br>Pop: 5335<br>Median Income: $44792<br></div>`)[0];
+                popup_acde7e223aad75a7d6749784914a0dfc.setContent(html_390a80298c81d4f337db016c6d59402b);
+            
+        
+
+        circle_marker_841b71caae5a1ca9b0e75555af0919c9.bindPopup(popup_acde7e223aad75a7d6749784914a0dfc)
+        ;
+
+        
+    
+    
+            var circle_marker_3d5ff692b30584c190aae4a5ea855ef1 = L.circleMarker(
+                [35.8977396, -84.148696],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_43305c81dd49e7f39757dc09a2487bf2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d32607e3f28e389bab668249812dd516 = $(`<div id="html_d32607e3f28e389bab668249812dd516" style="width: 100.0%; height: 100.0%;">Marshalls<br>Visits: 529035<br>Pop: 3466<br>Median Income: $120661<br></div>`)[0];
+                popup_43305c81dd49e7f39757dc09a2487bf2.setContent(html_d32607e3f28e389bab668249812dd516);
+            
+        
+
+        circle_marker_3d5ff692b30584c190aae4a5ea855ef1.bindPopup(popup_43305c81dd49e7f39757dc09a2487bf2)
+        ;
+
+        
+    
+    
+            var circle_marker_883d7470eff8570e86e2050698bb5fb4 = L.circleMarker(
+                [36.33236, -82.3742714],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_b002925e8a78c907b008b3323773c12e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4cd89cbb2a33f39b1858419043f1a59d = $(`<div id="html_4cd89cbb2a33f39b1858419043f1a59d" style="width: 100.0%; height: 100.0%;">Marshalls<br>Visits: 504807<br>Pop: 2090<br>Median Income: $76698<br></div>`)[0];
+                popup_b002925e8a78c907b008b3323773c12e.setContent(html_4cd89cbb2a33f39b1858419043f1a59d);
+            
+        
+
+        circle_marker_883d7470eff8570e86e2050698bb5fb4.bindPopup(popup_b002925e8a78c907b008b3323773c12e)
+        ;
+
+        
+    
+    
+            var circle_marker_990fdc6b35ec41e72fca679a425ab838 = L.circleMarker(
+                [35.8589088, -83.5845258],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_3f43db4671310b046177d93783af7961 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_389aceb7b4eaf026ea9a0d02b1a013d7 = $(`<div id="html_389aceb7b4eaf026ea9a0d02b1a013d7" style="width: 100.0%; height: 100.0%;">TJ.Maxx/Marshalls/HomeGoods<br>Visits: 645239/554943/524555<br>Pop: 5335<br>Median Income: $44792<br></div>`)[0];
+                popup_3f43db4671310b046177d93783af7961.setContent(html_389aceb7b4eaf026ea9a0d02b1a013d7);
+            
+        
+
+        circle_marker_990fdc6b35ec41e72fca679a425ab838.bindPopup(popup_3f43db4671310b046177d93783af7961)
+        ;
+
+        
+    
+    
+            var circle_marker_82c36d6bb9ab5f53810f26c1f5277336 = L.circleMarker(
+                [35.8977396, -84.148696],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_5ba9645c939c5a1d71b6f38479ba0c32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_070523ba43946958f8ab164775e45322 = $(`<div id="html_070523ba43946958f8ab164775e45322" style="width: 100.0%; height: 100.0%;">Marshalls/HomeGoods<br>Visits: 529035/500254<br>Pop: 3466<br>Median Income: $120661<br></div>`)[0];
+                popup_5ba9645c939c5a1d71b6f38479ba0c32.setContent(html_070523ba43946958f8ab164775e45322);
+            
+        
+
+        circle_marker_82c36d6bb9ab5f53810f26c1f5277336.bindPopup(popup_5ba9645c939c5a1d71b6f38479ba0c32)
+        ;
+
+        
+    
+    
+            var circle_marker_9ac940b37e5170ec5f13db85cc1bd42a = L.circleMarker(
+                [36.33236, -82.3742714],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ee9b0944b6401f384f3dc78c3fb77620);
+        
+    
+        var popup_9917f9ff5d2452641c98c8272de6115c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2f8d80ddcceb1fed9e9b16b2a92a777 = $(`<div id="html_d2f8d80ddcceb1fed9e9b16b2a92a777" style="width: 100.0%; height: 100.0%;">Marshalls/HomeGoods<br>Visits: 504807/483055<br>Pop: 2090<br>Median Income: $76698<br></div>`)[0];
+                popup_9917f9ff5d2452641c98c8272de6115c.setContent(html_d2f8d80ddcceb1fed9e9b16b2a92a777);
+            
+        
+
+        circle_marker_9ac940b37e5170ec5f13db85cc1bd42a.bindPopup(popup_9917f9ff5d2452641c98c8272de6115c)
+        ;
+
+        
+    
+</script>
